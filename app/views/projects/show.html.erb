@@ -1,0 +1,22 @@
+  <article>
+    <header>
+      <h2><%= @project.name %></h2>
+    </header>
+    <p>
+      <%= @project.description %>
+    </p>
+    <table>
+      <tr>
+        <th>Target amount:</th>
+        <td><%= number_to_currency(@project.target_pledge_amount, :unit => "EUR ") %></td>
+      </tr>
+      <tr>
+        <th>Website:</th>
+        <td><%= @project.website %></td>
+      </tr>
+      <tr>
+        <th>Pledging ends on:</th>
+        <td><%= pledging_ends_format(@project) %></td>
+      </tr>
+    </table>
+  </article>
