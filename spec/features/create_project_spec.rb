@@ -12,7 +12,7 @@ describe "Creating a new project" do
     fill_in "Description", with: "This is an empty project"
     fill_in "Target pledge amount", with: "1500"
     fill_in "Website", with: "www.themenow"
-    select (Time.now.year - 1).to_s, :from => "project_pledging_ends_on_1i"
+    select (Time.now.month + 1).to_s, :from => "project_pledging_ends_on_1i"
 
     # If you're taking advantage of the HTML 5 date field in Chrome,
     # you'll need to use 'fill_in' rather than 'select'
