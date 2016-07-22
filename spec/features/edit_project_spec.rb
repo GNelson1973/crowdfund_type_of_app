@@ -7,7 +7,7 @@ describe "Editing a project" do
                                 description: "We are going to create the next big thing",
                                 target_pledge_amount: 100000,
                                 website: "www.zekerweten.nl",
-                                pledging_ends_on: "2016-08-13")
+                                pledging_ends_on: 1.month.from_now)
 
       visit project_url(project)
 
