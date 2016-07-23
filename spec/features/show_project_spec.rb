@@ -15,6 +15,8 @@ describe "Viewing an individual project" do
     expect(page).to have_text("EUR 100.00")
     expect(page).to have_text(project.website)
     expect(page).to have_text(project.pledging_ends_on)
+    expect(page).to have_text(project.team_members)
+    expect(page).to have_selector("img[src$='#{project.image_file_name}']")
   end
 
 end

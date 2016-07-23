@@ -12,6 +12,7 @@ describe "Listing projects" do
     visit projects_path
 
     expect(page).not_to have_text(project.name)
+    expect(page).to have_selector("img[src$='#{projectA.image_file_name}']")
   end
 
 end
