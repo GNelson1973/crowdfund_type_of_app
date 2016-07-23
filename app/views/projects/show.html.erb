@@ -1,6 +1,7 @@
   <article>
     <header>
       <h2><%= @project.name %></h2>
+      <%= image_for(@project) %>
     </header>
     <p>
       <%= @project.description %>
@@ -17,6 +18,10 @@
       <tr>
         <th>Pledging ends on:</th>
         <td><%= pledging_ends_format(@project) %></td>
+      </tr>
+      <tr>
+        <th>Team members:</th>
+        <td><%= @project.team_members %></td>
       </tr>
     </table>
   </article>

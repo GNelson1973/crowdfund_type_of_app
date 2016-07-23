@@ -14,4 +14,12 @@ module ProjectsHelper
     end
   end
 
+  def image_for(project)
+    if project.image_file_name.blank?
+      image_tag("project_icon1.jpg", class: "image_tag_listing")
+    else
+      image_tag(project.image_file_name, class: "image_tag_listing")
+    end
+  end
+
 end

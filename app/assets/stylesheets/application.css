@@ -30,3 +30,13 @@
   }
 
   .page-row-expanded { height: 100%; }
+
+.image_tag_listing {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.image_tag_show {
+  max-width: 500px;
+  max-height: 400px;
+}
