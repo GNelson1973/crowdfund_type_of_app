@@ -8,9 +8,17 @@ module ProjectsHelper
     elsif project.expired?
       "<strong><em>All Done!</em></strong>".html_safe + " #{(start_date.to_date - end_date.to_date).to_i} days ago"
     elsif project.more_29_days?
-      " #{( end_date.to_date - start_date.to_date ).to_i} days remaining".html_safe
+      "#{( end_date.to_date - start_date.to_date ).to_i} days remaining".html_safe
     else
-      distance_of_time_in_words( project.pledging_ends_on, Time.now ) + " remaining".html_safe
+      "#{end_date} " + distance_of_time_in_words( project.pledging_ends_on, Time.now ) + " remaining".html_safe
+    end
+  end
+
+  def image_for(project)
+    if project.image_file_name.blank?
+      image_tag("project_icon1.jpg", class: "image_tag_listing")
+    else
+      image_tag(project.image_file_name, class: "image_tag_listing")
     end
   end
 

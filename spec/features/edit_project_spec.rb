@@ -7,7 +7,9 @@ describe "Editing a project" do
                                 description: "We are going to create the next big thing",
                                 target_pledge_amount: 100000,
                                 website: "www.zekerweten.nl",
-                                pledging_ends_on: 1.month.from_now)
+                                pledging_ends_on: 1.month.from_now,
+                                image_file_name: "project_icon1.jpg"
+                                )
 
       visit project_url(project)
 
@@ -16,6 +18,7 @@ describe "Editing a project" do
       expect(current_path).to eq(edit_project_path(project))
 
       expect(find_field('Name').value).to eq(project.name)
+      expect(find_field('Image file name').value).to eq("#{project.image_file_name}")
     end
 
 end

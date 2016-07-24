@@ -6,6 +6,7 @@
   <article>
     <header>
       <h2><%= link_to project.name, project %></h2>
+      <%= image_for(project) %>
     </header>
     <p>
       <%= truncate(project.description, length: 30, separator: ' ') %>
@@ -22,6 +23,10 @@
       <tr>
         <th>Pledging ends on:</th>
         <td><%= pledging_ends_format(project) %></td>
+      </tr>
+      <tr>
+        <th>Team members:</th>
+        <td><%= project.team_members %></td>
       </tr>
     </table>
   </article>

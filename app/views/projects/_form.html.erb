@@ -20,6 +20,14 @@
   <%= f.date_select :pledging_ends_on %>
 </p>
 <P>
+  <%= f.label :team_members %><br/>
+  <%= f.text_field :team_members %>
+</p>
+<P>
+  <%= f.label :image_file_name %><br/>
+  <%= f.text_field :image_file_name %>
+</p>
+<P>
   <%= f.submit %> | <%= link_to "Cancel", root_path %>
 </p>
 <% end %>
