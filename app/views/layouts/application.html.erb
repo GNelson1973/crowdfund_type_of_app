@@ -10,13 +10,22 @@
 
 <main class="page-row page-row-expanded">
 <%= render "layouts/header" %>
-<%= render "layouts/sidebar" %>
 
-<%= yield %>
+  <div id="wrapper">
 
+    <div id="container">
+      <section id="sidebar">
+        <%= render "layouts/sidebar" %>
+      </section>
+      <section id="content">
+        <%= yield %>
+      </section>
+    </div>
+
+  </div>
 </main>
 
-<%= render "layouts/footer" %>
+  <%= render "layouts/footer" %>
 
 </body>
 </html>

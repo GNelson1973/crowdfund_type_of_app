@@ -1,9 +1,10 @@
+<ul id="projects">
 <h1><%= pluralize(@projects.length, "project") %></h1>
 
 <% @projects.each do |project| %>
   <article class="project">
     <header>
-      <%= image_for(project) %>
+      <%= image_for_index(project) %>
       <h2><%= link_to project.name, project %></h2>
     </header>
     <p>

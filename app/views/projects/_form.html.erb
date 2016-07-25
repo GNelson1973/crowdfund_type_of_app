@@ -1,34 +1,37 @@
 <%= form_for(@project) do |f| %>
-<P>
-  <%= f.label :name %><br/>
-  <%= f.text_field :name, autofocus: true %>
-</p>
-<P>
-  <%= f.label :description %><br/>
-  <%= f.text_area :description, cols: 50, rows: 6 %>
-</p>
-<P>
-  <%= f.label :target_pledge_amount %><br/>
-  <%= f.number_field :target_pledge_amount %>
-</p>
-<P>
-  <%= f.label :website %><br/>
-  <%= f.text_field :website %>
-</p>
-<P>
-  <%= f.label :pledging_ends_on %><br/>
-  <%= f.date_select :pledging_ends_on %>
-</p>
-<P>
-  <%= f.label :team_members %><br/>
-  <%= f.text_field :team_members %>
-</p>
-<P>
-  <%= f.label :image_file_name %><br/>
-  <%= f.text_field :image_file_name %>
-</p>
-<P>
-  <%= f.submit %> | <%= link_to "Cancel", root_path %>
-</p>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, autofocus: true %>
+      </li>
+      <li class="required">
+        <%= f.label :description %><br/>
+        <%= f.text_area :description, cols: 50, rows: 6 %>
+      </li>
+      <li class="required">
+        <%= f.label :target_pledge_amount %><br/>
+        <%= f.number_field :target_pledge_amount %>
+      </li>
+      <li class="required">
+        <%= f.label :website %><br/>
+        <%= f.text_field :website %>
+      </li>
+      <li class="required">
+        <%= f.label :pledging_ends_on %><br/>
+        <%= f.date_select :pledging_ends_on %>
+      </li>
+      <li class="required">
+        <%= f.label :team_members %><br/>
+        <%= f.text_field :team_members %>
+      </li>
+      <li>
+        <%= f.label :image_file_name %><br/>
+        <%= f.text_field :image_file_name %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit %> <%= link_to "Cancel", root_path, class: 'cancel' %>
+    </p>
+  </fieldset>
 <% end %>
-<br/>
