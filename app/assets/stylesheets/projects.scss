@@ -1,3 +1,29 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,
+
+ body { height: 100%; }
+
+ body {
+   display: table;
+   width: 100%;
+ }
+
+ .page-row {
+   display: table-row;
+   height: 1px;
+ }
+
+ .page-row-expanded { height: 100%; }
+
+.image_tag_listing {
+ max-width: 200px;
+ max-height: 200px;
+}
+
+.image_tag_show {
+ max-width: 500px;
+ max-height: 400px;
+}
