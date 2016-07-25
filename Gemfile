@@ -49,3 +49,5 @@ end
 group :test do
   gem "capybara", "2.7.1"
 end
+
+gem 'date_validator', '~> 0.9.0'
