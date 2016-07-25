@@ -1,10 +1,10 @@
 <h1><%= pluralize(@projects.length, "project") %></h1>
 
 <% @projects.each do |project| %>
-  <article>
+  <article class="project">
     <header>
-      <h2><%= link_to project.name, project %></h2>
       <%= image_for(project) %>
+      <h2><%= link_to project.name, project %></h2>
     </header>
     <p>
       <%= truncate(project.description, length: 30, separator: ' ') %>

@@ -19,11 +19,19 @@ html,
  .page-row-expanded { height: 100%; }
 
 .image_tag_listing {
- max-width: 200px;
- max-height: 200px;
+ max-width: 225px;
+ max-height: 225px;
 }
 
 .image_tag_show {
  max-width: 500px;
  max-height: 400px;
+}
+
+article.project {
+  img {
+    float: left;
+    margin: 0 20px;
+    border: 3px solid #F0F0F0;
+  }
 }
