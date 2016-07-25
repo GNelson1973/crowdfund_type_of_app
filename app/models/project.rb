@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
 
   validates :name, :website, :team_members, presence: true
-  validates :description, length: {minimum: 25}
+  validates :description, length: {minimum: 20}
   validates :target_pledge_amount, numericality: {greater_than_or_equal_to: 0,  message: "%{value}must be greater than zero." }
   validates :image_file_name, allow_blank: true, format: {
     with: /\w+|.(gif|jpg|png)\z/i,

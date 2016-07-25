@@ -8,7 +8,8 @@ describe "Editing a project" do
                                 target_pledge_amount: 100000,
                                 website: "www.zekerweten.nl",
                                 pledging_ends_on: 1.month.from_now,
-                                image_file_name: "project_icon1.jpg"
+                                image_file_name: "project_icon1.jpg",
+                                team_members: "Nelson",
                                 )
 
       visit project_url(project)

@@ -6,7 +6,9 @@ describe "Viewing an individual project" do
                               description: "A description of a start-up projects",
                               target_pledge_amount: 100.00,
                               website: "http://project-a.com",
-                              pledging_ends_on: 1.day.from_now )
+                              pledging_ends_on: 1.day.from_now,
+                              team_members: "Nelson",
+                              )
 
     visit project_url(project)
 
