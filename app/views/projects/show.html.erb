@@ -1,11 +1,13 @@
-  <article>
+  <article id="project" class="project">
     <header>
+      <%= image_for_show(@project) %>
       <h2><%= @project.name %></h2>
-      <%= image_for(@project) %>
     </header>
+
     <p>
       <%= @project.description %>
     </p>
+
     <table>
       <tr>
         <th>Target amount:</th>
@@ -24,9 +26,11 @@
         <td><%= @project.team_members %></td>
       </tr>
     </table>
-  </article>
 
-<br/>
-<%= link_to "All Projects", root_path %> |
-<%= link_to "Edit", edit_project_path(@project) %> |
-<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?"} %>
+    <footer>
+      <nav>
+    <%= link_to "Edit", edit_project_path(@project), class: 'cancel' %>
+    <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: 'cancel' %>
+      </nav>
+    </footer>
+  </article>
