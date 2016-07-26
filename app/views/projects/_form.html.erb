@@ -1,22 +1,5 @@
 <%= form_for(@project) do |f| %>
-<% if @project.errors.any? %>
-  <section id="errors">
-    <header>
-      <h2>
-        Oops! Your form could not be saved.
-      </h2>
-      <h3>
-        Please correct the following
-        <%= pluralize(@project.errors.count, "error") %>:
-      </h3>
-    </header>
-    <ul>
-      <% @project.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-      <% end %>
-    </ul>
-  </section>
-<% end %>
+<%= render "shared/errors" %>
   <fieldset>
     <ol>
       <li class="required">
