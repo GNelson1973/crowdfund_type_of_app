@@ -11,7 +11,11 @@
 <main class="page-row page-row-expanded">
 <%= render "layouts/header" %>
 
-  <div id="wrapper">
+<div id="wrapper">
+
+    <p>
+      <%= flash[:notice] %>
+    </p>
 
     <div id="container">
       <section id="sidebar">
@@ -22,7 +26,7 @@
       </section>
     </div>
 
-  </div>
+</div>
 </main>
 
   <%= render "layouts/footer" %>
