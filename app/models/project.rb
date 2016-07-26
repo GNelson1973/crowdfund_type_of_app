@@ -11,6 +11,9 @@ class Project < ActiveRecord::Base
   validates :pledging_ends_on,
     date: { after: Proc.new { Date.today }, message: 'must be after today' }
 
+
+  has_many :pledges, dependent: :destroy #destroys all pledges when project is destroyed
+
   def expired?
      pledging_ends_on.past?
   end
