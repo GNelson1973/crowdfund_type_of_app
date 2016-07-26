@@ -22,8 +22,12 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.create(project_params)
-    redirect_to @project
+    @project = Project.new(project_params)
+    if @project.save # this calls the valid? method if any errors messages than not save
+      redirect_to @project
+    else
+      render :new # not redirect_to than you loose the data filled out already
+    end
   end
 
   def destroy
