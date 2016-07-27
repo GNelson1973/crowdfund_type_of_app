@@ -26,7 +26,9 @@
         <td><%= @project.team_members %></td>
       </tr>
     </table>
-
+    <p>
+      <%= link_to "Who has made pledges?", project_pledges_path(@project) %>
+    </p>
     <footer>
       <nav>
     <%= link_to "Edit", edit_project_path(@project), class: 'cancel' %>

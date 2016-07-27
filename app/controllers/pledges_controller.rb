@@ -1,5 +1,6 @@
 class PledgesController < ApplicationController
   def index
-    @pledges = Pledge.all
+    @project = Project.find(params[:project_id])
+    @pledges = @project.pledges
   end
 end
