@@ -1,0 +1,28 @@
+<header id="content-header">
+  <h1>Pledge for <%= link_to @project.name, @project %></h1>
+</header>
+
+<%= form_for([@project, @pledge]) do |f| %>
+<fieldset>
+  <ol>
+    <li class="required">
+      <%= f.label :name %>
+      <%= f.text_field :name, size: 40, autofocus: true %>
+    </li>
+    <li class="required">
+      <%= f.label :email %>
+      <%= f.text_field :email, size: 40 %>
+    </li>
+    <li class="required">
+      <%= f.label :pledge_amount %>
+      <%= f.select :pledge_amount,
+                  Pledge::PLEDGE_AMOUNT_OPTIONS,
+                  prompt: "Pick one" %>
+    </li>
+  </ol>
+  <p>
+    <%= f.submit %>
+    <%= link_to "Cancel", project_path(@project), class: 'cancel' %>
+  </p>
+</fieldset>
+<% end %>

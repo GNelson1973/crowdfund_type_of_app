@@ -4,11 +4,11 @@ class Pledge < ActiveRecord::Base
 
   validates :email, format: { with: /(\S+)@(\S+)/ }
 
-  pledge_amount_options = [
+  PLEDGE_AMOUNT_OPTIONS = [
     5, 10, 15, 25, 50, 100, 200, 500
   ]
 
-  validates :pledge_amount, inclusion: { in: pledge_amount_options }
+  validates :pledge_amount, inclusion: { in: PLEDGE_AMOUNT_OPTIONS }
 
   belongs_to :project
 end

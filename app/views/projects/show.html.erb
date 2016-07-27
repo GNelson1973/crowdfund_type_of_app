@@ -30,6 +30,7 @@
       <%= link_to "Who has made pledges?", project_pledges_path(@project) %>
     </p>
     <footer>
+      <%= link_to "Make a pledge!", new_project_pledge_path(@project), class:"button ok register" %>
       <nav>
     <%= link_to "Edit", edit_project_path(@project), class: 'cancel' %>
     <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: 'cancel' %>
