@@ -32,4 +32,12 @@ class Project < ActiveRecord::Base
     where("pledging_ends_on >= ?", Time.now).order(pledging_ends_on: :asc)
   end
 
+  def funded_percentage
+    (1 -(target_pledge_amount - (pledges.map { |pledge| pledge[:pledge_amount]}.sum))/target_pledge_amount) * 100
+  end
+
+  def funded_amount
+    pledges.map { |pledge| pledge[:pledge_amount]}.sum
+  end
+
 end

@@ -1,0 +1,15 @@
+<header id="content-header">
+  <h1>Pledges for <%= link_to(@project.name, @project) %></h1>
+</header>
+
+<ol id="pledges">
+  <% @pledges.each do |pledge| %>
+  <li>
+    <%= mail_to(pledge.email, pledge.name.capitalize) %>
+    <%= number_to_currency(pledge.pledge_amount, :unit => "EUR ", :precision => 0) %>
+    <br/>
+    Comment: <%= pledge.comment %>
+  </li>
+
+  <% end %>
+</ol>
