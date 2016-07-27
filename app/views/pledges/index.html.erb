@@ -1,0 +1,13 @@
+<header id="content-header">
+  <h1>Pledges</h1>
+</header>
+
+<ol id="pledges">
+  <% @pledges.each do |pledge| %>
+  <li>
+    <%= mail_to(pledge.email, pledge.name.capitalize) %>
+    (<%= pledge.project.name %>,
+    <%= number_to_currency(pledge.pledge_amount, :unit => "EUR ") %>)
+  </li>
+  <% end %>
+</ol>
