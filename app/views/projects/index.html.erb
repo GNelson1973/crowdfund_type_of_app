@@ -29,7 +29,7 @@
       </tr>
       <tr>
         <th>Team members:</th>
-        <td><%= project.team_members %></td>
+        <td><%= truncate(project.team_members, length: 10, separator: ' ') %></td>
       </tr>
     </table>
   </article>
