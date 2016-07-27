@@ -10,7 +10,7 @@ module ProjectsHelper
     elsif project.more_29_days?
       "#{( end_date.to_date - start_date.to_date ).to_i} days remaining".html_safe
     else
-      "#{end_date} " + distance_of_time_in_words( project.pledging_ends_on, Time.now ) + " remaining".html_safe
+      distance_of_time_in_words( project.pledging_ends_on, Time.now ) + " remaining".html_safe
     end
   end
 
