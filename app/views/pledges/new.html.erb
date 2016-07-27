@@ -3,6 +3,7 @@
 </header>
 
 <%= form_for([@project, @pledge]) do |f| %>
+<%= render 'shared/errors', object: @pledge %>
 <fieldset>
   <ol>
     <li class="required">
