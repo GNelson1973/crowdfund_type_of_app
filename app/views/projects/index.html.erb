@@ -13,7 +13,7 @@
     <table>
       <tr>
         <th>Target amount:</th>
-        <td><%= number_to_currency(project.target_pledge_amount, :unit => "EUR ") %></td>
+        <td><%= number_to_currency(project.target_pledge_amount, :unit => "EUR ", :precision => 0) %></td>
       </tr>
       <tr>
         <th>Website:</th>
@@ -32,5 +32,10 @@
         <td><%= truncate(project.team_members, length: 10, separator: ' ') %></td>
       </tr>
     </table>
+    <h3>
+        <%= project.funded_percentage %> % Funded +
+        <%= number_to_currency(project.funded_amount, :unit => "EUR ", :precision => 0) %> Pledged +
+        <%= pluralize(project.pledges.count, "Backer") %>
+    </h3>
   </article>
 <% end %>

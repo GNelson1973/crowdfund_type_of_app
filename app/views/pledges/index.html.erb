@@ -6,7 +6,10 @@
   <% @pledges.each do |pledge| %>
   <li>
     <%= mail_to(pledge.email, pledge.name.capitalize) %>
-    (<%= number_to_currency(pledge.pledge_amount, :unit => "EUR ") %>)
+    <%= number_to_currency(pledge.pledge_amount, :unit => "EUR ", :precision => 0) %>
+    <br/>
+    Comment: <%= pledge.comment %>
   </li>
+
   <% end %>
 </ol>

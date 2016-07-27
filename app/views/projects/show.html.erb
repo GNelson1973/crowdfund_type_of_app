@@ -11,7 +11,7 @@
     <table>
       <tr>
         <th>Target amount:</th>
-        <td><%= number_to_currency(@project.target_pledge_amount, :unit => "EUR ") %></td>
+        <td><%= number_to_currency(@project.target_pledge_amount, :unit => "EUR ", :precision => 0) %></td>
       </tr>
       <tr>
         <th>Website:</th>
